@@ -6,6 +6,7 @@
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
+	font-family:'ebrima';
 }
 body, html{
 	width:100%;
@@ -16,7 +17,6 @@ body, html{
 }
 p{
 	color:#FFFFFF;
-	font-family:'ebrima';
 	font-size: 16px;
 	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
 	text-align: center;
@@ -166,6 +166,14 @@ footer{
 	animation-fill-mode: forwards;
 }
 
+.author{
+	font-size:10px;
+	color:white;
+	position:absolute;
+	bottom:0;
+	right:20px;
+}
+
 @keyframes backgroundAnimate{
 	0%{transform:scale(2);}
 	100%{transform:scale(1);}
@@ -196,6 +204,9 @@ footer{
 
 	h1{
 		font-size:18px;
+	}
+	.author{
+		display:none;
 	}
 }
 @media (orientation:portrait){
