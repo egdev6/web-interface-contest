@@ -1,0 +1,215 @@
+@font-face{
+	src:url(../font/ebrima.ttf);
+	font-family: 'ebrima';
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+body, html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	min-height:320px;
+	min-width:320px;
+}
+p{
+	color:#FFFFFF;
+	font-family:'ebrima';
+	font-size: 16px;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+body{
+	height:100%;
+	background-image:url(../img/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:center center;
+	z-index:0;
+}
+
+#background{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-image:url(../img/background2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:center center;
+	z-index:1;
+	animation-name: backgroundAnimate;
+	animation-duration: 1.2s;
+	animation-iteration-count: 1;
+	top:0;
+}
+header{
+	height: 30%;
+	opacity: 0;
+	animation-name: titleAnimate;
+	animation-duration: 1.2s;
+	animation-iteration-count: 1;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+}
+header img{
+	height:80%;
+	width:auto;
+}
+#main{
+	width:100%;
+	height:50%;
+}
+nav{
+	width:0%;
+	max-width:850px;
+	height:80%;
+	min-height:130px;
+	z-index:5;
+	border-top: 3px solid #FFFFFF;
+	border-bottom: 3px solid #FFFFFF;
+	animation-name: navAnimate;
+	animation-duration: 1.2s;
+	animation-iteration-count: 1;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+}
+.link{
+	width:20%;
+	height:100%;
+	max-height: 220px;
+	text-align: center;
+	transform:scale(0);
+	transition: all 0.4s;
+	animation-name: linkAnimate;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+.link a{
+	width:100%;
+	height: 100%;
+	text-decoration:none;
+	cursor:pointer;
+}
+.link a div{
+	width:100%;
+	height:100%;
+}
+.link a div h1{
+	margin-top:4%;
+	opacity:0;
+	animation-name: linkNameAnimate;
+	animation-duration: 0.8s;
+	animation-iteration-count: 1;
+	animation-delay: 3.8s;
+	animation-fill-mode: forwards;
+}
+.link a div img{
+	height:60%;
+	max-width:130px;
+}
+
+.link a div img:hover{
+	transition: all 0.8s;
+	transform:scale(1.2);	
+}
+.flex-column{
+	display:flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+}
+.flex-organization{
+	display:flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+h1{
+	color:#FFFFFF;
+	font-family:'ebrima';
+	font-size: 22px;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);	
+}
+#link-content{
+	text-align: center;
+	display:none;
+	width:50%;
+	height:10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#link-content p{
+	margin:2%;
+	padding:5px;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+}
+
+
+footer{
+	width:100%;
+	height:10%;
+	position:fixed;
+	margin-bottom: 10px;
+	bottom:0;
+	left:0;
+	text-align: center;
+	opacity: 0;
+	animation-name: titleAnimate;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes backgroundAnimate{
+	0%{transform:scale(2);}
+	100%{transform:scale(1);}
+}
+
+@keyframes titleAnimate{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@keyframes navAnimate{
+	0%{width:0%;}
+	100%{width:90%;}
+}
+@keyframes linkAnimate{
+	0%{transform:scale(0);}
+	100%{transform:scale(0.8);}
+}
+@keyframes linkNameAnimate{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@media (max-width: 768px){
+	p{
+		font-size:12px;
+	}
+
+	h1{
+		font-size:18px;
+	}
+}
+@media (orientation:portrait){
+	header{
+		height:15%;
+	}
+	#main{
+		height:75%;
+	}
+	nav{
+		height:90%;
+	}
+	.link{
+		width:40%;
+		height:40%;
+	}
+}
